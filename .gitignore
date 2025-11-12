@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# env
+.env
+.env.*
+*.env
+
+# system
+.DS_Store
+thumbs.db
+
+# streamlit
+.streamlit/
