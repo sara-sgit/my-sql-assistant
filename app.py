@@ -139,26 +139,10 @@ st.title("Learn SQL by Asking Questions")
 st.write("Type a question and discover how SQL works. You'll see the generated query, a step-by-step explanation, and the query results in real time.")
 
 
-# --- Sidebar Settings ---
-with st.sidebar:
-    st.subheader("⚙️ Database Settings")
-    st.text_input("Host", value="localhost", key="Host")
-    st.text_input("Port", value="3306", key="Port")
-    st.text_input("User", value="root", key="User")
-    st.text_input("Password", type="password", value="1234", key="Password")
-    st.text_input("Database", value="ecommerce_demo", key="Database")
 
-    if st.button("Connect"):
-        with st.spinner("Connecting to database..."):
-            db = init_database(
-                st.session_state["User"],
-                st.session_state["Password"],
-                st.session_state["Host"],
-                st.session_state["Port"],
-                st.session_state["Database"]
-            )
-            st.session_state.db = db
-            st.success("✅ Connected to database!")
+
+ 
+
 
 # --- Chat Display ---
 for message in st.session_state.chat_history:
