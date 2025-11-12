@@ -36,6 +36,8 @@ db = init_database(
     database=MYSQL_DATABASE
 )
 
+if "db" not in st.session_state:
+    st.session_state.db = db
 # ------------------- SQL GENERATION CHAIN -------------------
 def get_sql_chain(db):
     template = """
